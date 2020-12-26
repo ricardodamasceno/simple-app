@@ -12,7 +12,7 @@ public class HomeController {
 
     @GetMapping
     public @ResponseBody String home(){
-        return "App home is responding !!! ";
+        return "Simple App - Home is responding !!! ";
     }
 
 }
