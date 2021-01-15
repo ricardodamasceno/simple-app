@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-app-deployment
+spec:
+  replicas: 3
+  template:
+    metadata:
+      name: simple-app-pod
+      labels:
+        app: simple-app-pod
+    spec:
+      containers:
+        - name: simple-app-container
+          image: ricardodpaiva/simple-app
+          ports:
+            - containerPort: 8080
+  selector:
+    matchLabels:
+      app: simple-app-pod
