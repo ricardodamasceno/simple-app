@@ -5,7 +5,7 @@ metadata:
 spec:
   type: NodePort
   selector:
-    app: simple-app
+    app: simple-app-pod
   ports:
     - port: 80
       targetPort: 8080
