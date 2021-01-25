@@ -10,3 +10,8 @@ kubectl annotate deployment (deployment-name) kubernetes.io/change-cause="Messag
 ## Deployment rollback to specific version
 kubectl rollout undo deployment (deployment-name) --to-revision=(deployment-version)
 
+## Add metric server on minikube ( Necessary to use HPA )
+minikube addons enable metrics-server
+
+## Run stress-test.sh file 
+bash stress-test.sh 0.001 > out.txt
